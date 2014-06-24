@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Chess Tournament 64</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/data/icon</normaloff>:/data/icon</iconset>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="TabForm">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>640</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>640</width>
+      <height>441</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>640</width>
+      <height>441</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+    <widget class="QWidget" name="TMenu">
+     <attribute name="title">
+      <string>Main menu</string>
+     </attribute>
+     <widget class="QPushButton" name="StartTournamentButton">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>260</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Aharoni</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Start Tournament</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NextTournButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>310</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Aharoni</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Next Tourn</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ExitButton">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>360</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Aharoni</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>640</width>
+        <height>440</height>
+       </rect>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/data/background_picture</pixmap>
+      </property>
+     </widget>
+     <zorder>background</zorder>
+     <zorder>StartTournamentButton</zorder>
+     <zorder>NextTournButton</zorder>
+     <zorder>ExitButton</zorder>
+    </widget>
+    <widget class="QWidget" name="TNewP">
+     <attribute name="title">
+      <string>New Player</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineNameIn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineSurnameIn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>30</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Surname</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>50</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Birthday</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateBirthdayIn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>50</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="currentSection">
+       <enum>QDateTimeEdit::DaySection</enum>
+      </property>
+      <property name="date">
+       <date>
+        <year>1990</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AddPlayerButton">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>110</y>
+        <width>340</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add player</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>70</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Title</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>90</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rating</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboTitleIn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>70</y>
+        <width>231</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string comment="0">Grangmaster</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string comment="1">International master</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string comment="2">FIDE master</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string comment="3">Candidate master</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string comment="4">1st category</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string comment="5">2nd category</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string comment="6">3rd category</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string comment="7">4th category</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QSpinBox" name="spinRatingIn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>90</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="wrapping">
+       <bool>false</bool>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="minimum">
+       <number>1600</number>
+      </property>
+      <property name="maximum">
+       <number>3000</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="left_bg">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>131</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="right_bg">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>10</y>
+        <width>131</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="TCurM">
+     <attribute name="title">
+      <string>Current matches</string>
+     </attribute>
+     <widget class="QTableWidget" name="MatchesTW">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>636</width>
+        <height>416</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::DotLine</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>№</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>White</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Black</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Result</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="TTouT">
+     <attribute name="title">
+      <string>Tournament Table</string>
+     </attribute>
+     <widget class="QTableWidget" name="TableTV">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>636</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>636</width>
+        <height>361</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>636</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="rowCount">
+       <number>0</number>
+      </property>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Surname</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Title</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Points</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Bukcholz</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Berger</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="ReloadButton">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>390</y>
+        <width>630</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reload</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="labelMenuInfo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>440</y>
+      <width>640</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:20pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Welcome to CT8sqared!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
